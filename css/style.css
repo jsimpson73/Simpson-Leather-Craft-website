@@ -1,0 +1,200 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    color: #000000;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 15px;
+}
+
+/* Banner */
+header img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsive Heading */
+h1 {
+    font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
+    margin: 20px 0;
+    color: #2a26fc;
+}
+
+/* Navigation */
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: black;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+header nav ul li a {
+    font-size: clamp(0.9rem, 1vw + 0.5rem, 1.3rem);
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile nav stack */
+@media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+/* Containers/Sections */
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+/* Shared Card Styles */
+.pattern-item, .review-item, .video-item {
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pattern-item:hover, .review-item:hover, .video-item:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Patterns Section - Grid */
+.Patterns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: stretch;
+}
+
+.pattern-item {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 350px;
+}
+
+.pattern-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.pattern-item .content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.pattern-item h3 { margin: 10px 0 5px; }
+.pattern-item p { margin-top: auto; }
+
+/* Reviews Section */
+.Reviews {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: stretch;
+}
+
+.review-item {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.review-item img {
+    width: auto
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.review-item h3 {
+    margin: 0 0 10px;
+    padding: 0 5px;
+}
+
+.review-item p {
+    margin: 0;
+    padding: 0 5px;
+    flex-grow: 1;
+}
+
+/* Video Section */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: stretch;
+}
+
+.video-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 200px;
+}
+
+.video-item iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.video-item .caption {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: rgba(0,0,0,0.6);
+    padding: 6px 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Responsive grids for patterns, reviews, videos */
+@media (max-width: 1200px) {
+    .Patterns, .Reviews, .video-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+    .Patterns, .Reviews, .video-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .Patterns, .Reviews, .video-grid { grid-template-columns: 1fr; }
+}
