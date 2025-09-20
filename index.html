@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="John Simpson">
-    <meta keywords="leather, leathercraft, handcrafted leather, custom leather, leather goods, leather patterns, digital patterns, hand stitched leather">
     <title>Simpson Leather Craft</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/js/scripts.js" defer></script>
     <link rel="icon" href="/images/SLCicon.png" type="image/png">
@@ -14,6 +14,7 @@
 <body>
     <header>
         <img src="images/SLCbanner.png" alt="Simpson Leather Craft banner">
+        <meta keywords="leather, leathercraft, handcrafted leather, custom leather, leather goods, leather patterns, digital patterns, hand stitched leather">
         <h1>Custom, Hand Crafted Leather Goods and Patterns</h1>
         <nav>
             <ul>
@@ -25,6 +26,13 @@
             </ul>
         </nav>
     </header>
+
+    <section class="under-construction" aria-labelledby="uc-heading" role="region">
+        <div class="uc-content">
+            <h2 id="uc-heading">Under Construction</h2>
+            <p>We're improving the site — thanks for your patience. Check back soon!</p>
+        </div>
+    </section>
 
         <section id="products" class="hero">
         <div class="container">
@@ -60,6 +68,8 @@
     <section id="patterns" class="info-section">
         <div class="container">
             <h2>Digital Patterns</h2>
+            <p style="margin:0">
+            <span>Downloadable leather crafting patterns in a .pdf format. ***NOT PHYSICAL ITEMS***. There are great printable patterns to guide you in creating amazing leather items.</span>
             <div class="Patterns">
                 <div class="pattern-item">
                     <img src="images/pattscreenshot-holster.png" alt="Leather Pattern Example">
@@ -87,6 +97,44 @@
                     <div class="content-wrapper">
                         <h3>Leather Pattern 4</h3>
                         <p>Perfect for crafting your own custom leather items.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="info-section">
+        <div class="container">
+            <h2>Custom Leather Items</h2>
+            <p style="margin:0">
+            <span>All physical leather crafted items are hand made. Tooling is completely custom. Holes are hand punched. The stitching is all saddle stitched by hand. This has allowed more attention to be placed on the final products. Laser engraving, for more detailed designs, has recently been introduced as our only "machine" used.</span>
+            <div class="Patterns">
+                <div class="pattern-item">
+                    <img src="https://fillmurray.lucidinternets.com/g/200/300" alt="physical leather item 1">
+                    <div class="content-wrapper">
+                        <h3>Leather Item 1</h3>
+                        <p>Item description 1.</p>
+                    </div>
+                </div>
+                <div class="pattern-item">
+                    <img src="https://fillmurray.lucidinternets.com/200/300" alt="physical leather item 2">
+                    <div class="content-wrapper">
+                        <h3>Leather Item 2</h3>
+                        <p>Item description 2.</p>
+                    </div>
+                </div>
+                <div class="pattern-item">
+                    <img src="https://fillmurray.lucidinternets.com/g/200/300" alt="physical leather item 3">
+                    <div class="content-wrapper">
+                        <h3>Leather Item 3</h3>
+                        <p>Item description 3.</p>
+                    </div>
+                </div>
+                <div class="pattern-item">
+                    <img src="https://fillmurray.lucidinternets.com/200/300" alt="physical leather item 4">
+                    <div class="content-wrapper">
+                        <h3>Leather Item 4</h3>
+                        <p>Item description 4.</p>
                     </div>
                 </div>
             </div>
@@ -128,19 +176,37 @@
         </div>
     </section>
 
+    <section id="social">
+        <h2><span>Social</span></h2>
+        <div>
+            <a target="_blank" href="https://www.facebook.com/simpsonleathercraft">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/simpsonleathercraft">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a target="_blank" href="https://www.tiktok.com/@simpsonleathercraft">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCFOZHuA-FFwXJgMrXD0O5Vg">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </section>
+
     <section id="contact" class="info-section">
         <div class="container">
             <h2>Contact Us</h2>
             <form>
                 <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br>
+                <input type="text" id="name" placeholder="Your Name" required><br>
                 <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
+                <input type="email" id="email" placeholder="Your Email" required><br>
                 <label for="subject">Subject:</label><br>
                 <input type="text" id="subject" name="subject"><br>
                 <label for="message">Message:</label><br>
-                <textarea id="message" name="message"></textarea><br>
-                <input type="submit" value="Send">
+                <textarea id="message" placeholder="Your Message" required></textarea><br>
+                <button type="submit">Send Message</button>
             </form>
         </div>
     </section>
